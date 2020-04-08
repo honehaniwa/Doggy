@@ -1,16 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<title>JavaScript テスト</title>
+<!doctype html>
+
+<html lang="ja-jp">
 <head>
-    
+  <meta charset="utf-8">
+  <title>Corona Mining</title>
+  <meta name="description" content="Clicker Game Test">
+  <meta name="author" content="Omar Herrera">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
+
 <body>
-
-    <script src="static/js/sample.js">
-    </script>
-
+  <div id="main-screen">
+    <table>
+      <tr>
+        <td colspan="4" rowspan="3"><img src="{{ url_for('static', filename='images/mainicon.png') }}" ></td>
+        <td onclick="myFunction()">感染経路</th>
+        <td>パワーアップ</th>
+      </tr>
+      <tr>
+        <td>コウモリ</td>
+        <td>コウモリソース</td>
+      </tr>
+      <tr>
+        <td>人間</td>
+        <td>花粉症</td>
+      </tr>
+      <tr>
+        <td colspan="2">感染者<br></td>
+        <td colspan="2">０</td>
+        <td>自動車</td>
+        <td>電気自動車</td>
+      </tr>
+      <tr>
+        <td colspan="4">リセット<br></td>
+        <td>飛行機</td>
+        <td>大西洋横断飛行</td>
+      </tr>
+    </table>
+  </div>
+  <script src="{{ url_for('static', filename='js/scripts.js') }}" charset="utf-8"></script>
 </body>
 </html>
