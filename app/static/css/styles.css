@@ -1,0 +1,28 @@
+html {
+    
+    color: #080708;
+    font-size: 1em;
+    line-height: 1.4;
+	background-color: #fff;
+}
+
+table {
+    background-color: #FFFFFF;
+    width: 70%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  table td, table th {
+    padding: 10px 0px;
+    text-align: center;
+  }
+  table tbody td {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+img{
+    height: 30%;
+    width: 30%;
+}
