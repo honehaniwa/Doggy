@@ -13,7 +13,6 @@ table {
   background-color: #FFFFFF;
   text-align: center;
   border-collapse: collapse;
-
   }
   table td, table th {
     padding: 10px 0px;
@@ -30,10 +29,12 @@ table {
 img{
     height: 30%;
     width: 30%;
-    
 }
 
 input{
     border-radius: 0%;
     font-weight: bold;
+    padding: 5px 5px 5px 5px;
+    width: 50%;
+    height: 50%;
 }
