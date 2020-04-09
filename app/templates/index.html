@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="ja-jp">
+<head>
+  <meta charset="utf-8">
+  <title>Corona Mining</title>
+  <meta name="description" content="Clicker Game Test">
+  <meta name="author" content="Omar Herrera">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+  <div id="main-screen">
+    <table>
+      <tr>
+        <td colspan="2" rowspan="4" ><img id="coronaicon" src="{{ url_for('static', filename='images/mainicon.png') }}" onclick="commonclick()" class="container selectDisable" ></td>
+        <td>感染経路</td>
+        <td>パワーアップ</td>
+      </tr>
+      <tr>
+        <td><input type="button" value="自動クリック" onclick="autoclick()"></td>
+        <td><input type="button" value="バイラルクリック" onclick="powerclick()"></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="コウモリ" onclick="batclick()" id="bat" disabled></td>
+        <td><input type="button" value="コウモリソース" onclick="batsourceclick()" id="batsources" disabled></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="人間" onclick="humanclick()" id="human" disabled></td>
+        <td><input type="button" value="花粉症" onclick="allergyclick()" id="allergy" disabled></td>
+      </tr>
+      <tr>
+        <td>感染者<br></td>
+        <td><p id="counter"></p></td>
+        <td><input type="button" value="自動車" onclick="carclick()"></td>
+        <td><input type="button" value="電気自動車" onclick="elecarclick()"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="button" value="リセット" onclick="reset()"><br></td>
+        <td><input type="button" value="飛行機" onclick="airplaneclick()" id="airplane" disabled></td>
+        <td><input type="button" value="大西洋横断飛行" onclick="transatlanticclick()" id="transatlantic" disabled></td>
+      </tr>
+    </table>
+  </div>
+  <script src="{{ url_for('static', filename='js/scripts.js') }}" charset="utf-8"></script>
+</body>
+</html>
