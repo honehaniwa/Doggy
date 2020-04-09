@@ -2,6 +2,7 @@ var infected = 0;
 var clickpower = 1;
 var idlepower = 0;
 var idleswitch = false;
+var startloop;
 
 function can_click(flag){
   console.log(infected);
@@ -32,14 +33,15 @@ function Update(flag){
   document.getElementById("counter").innerHTML = infected;
   can_click(flag);
 }
-Update(false);
+
 function idlecount(){
-  infected=infected+idlepower;
+  infected += idlepower;
   Update(false);
 }
 function switchon(){
   if (idleswitch==false){
-    setInterval(idlecount,1000);
+    idleswitch = true;
+    startloop = setInterval(idlecount, 1000);
   }
 }
 function commonclick() {
@@ -50,14 +52,14 @@ function powerclick(){
   clickpower++;
 }
 function autoclick(){
-  idlepower=idlepower+clickpower;
+  idlepower += clickpower;
   switchon();
-  idleswitch=false;
+  // idleswitch=false;
 }
 function batclick(){
   idlepower=idlepower+2;
   switchon();
-  idleswitch=false;
+  // idleswitch=false;
 }
 function batsourceclick(){
   clickpower+=2;
@@ -65,7 +67,7 @@ function batsourceclick(){
 function humanclick(){
   idlepower+=5;
   switchon();
-  idleswitch=false;
+  // idleswitch=false;
 }
 function allergyclick(){
   clickpower += 20;
@@ -73,7 +75,7 @@ function allergyclick(){
 function carclick(){
   idlepower=idlepower+4;
   switchon();
-  idleswitch=false;
+  // idleswitch=false;
 }
 function elecarclick(){
   clickpower += 100;
@@ -81,15 +83,16 @@ function elecarclick(){
 function airplaneclick(){
   idlepower=idlepower+8;
   switchon();
-  idleswitch=false;
+  // idleswitch=false;
 }
 function transatlanticclick(){
   clickpower += 1000;
 }
 function reset(){
+  Update(true);
   infected = 0;
   clickpower = 1;
   idlepower = 0;
   idleswitch = false;
-  Update(true);
+  clearInterval(startloop);
 }
