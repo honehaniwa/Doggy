@@ -13,12 +13,12 @@
   <div id="main-screen">
     <table>
       <tr>
-        <td colspan="4" rowspan="3"><img src="{{ url_for('static', filename='images/mainicon.png') }}" ></td>
-        <td onclick="myFunction()">感染経路</th>
+        <td colspan="4" rowspan="3" onclick="commonclick()"><img id="coronaicon"src="{{ url_for('static', filename='images/mainicon.png') }}" ></td>
+        <td>感染経路</th>
         <td>パワーアップ</th>
       </tr>
       <tr>
-        <td>コウモリ</td>
+        <td><input type="button" value="コウモリ"></td>
         <td>コウモリソース</td>
       </tr>
       <tr>
@@ -27,7 +27,7 @@
       </tr>
       <tr>
         <td colspan="2">感染者<br></td>
-        <td colspan="2">０</td>
+        <td colspan="2"><input id="counter" type="text" value="" readonly></td>
         <td>自動車</td>
         <td>電気自動車</td>
       </tr>
