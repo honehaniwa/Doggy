@@ -1,24 +1,77 @@
 var infected = 0;
-// function Update(){
-//   document.getElementById("counter").value = num.toString(infected);
-// }
-// Update();
-function commonclick() {
-  // window.alert('ba');
-  console.log(infected++);
-  if(infected >=10){
-    document.getElementById('bat').disabled=false;
+var clickpower = 1;
+var idlepower = 0;
+var idleswitch = false;
+
+function can_click(flag){
+  console.log(flag);
+  if(infected >= 10){
+    document.getElementById('auto').disabled=flag;
+    document.getElementById('power').disabled=flag;
   }
-  // Update();
+  if(infected >= 50){
+    document.getElementById('bat').disabled=flag;
+    document.getElementById('batsources').disabled=flag;
+  }
+  if(infected >= 100){
+    document.getElementById('human').disabled=flag;
+    document.getElementById('allergy').disabled=flag;
+  }
+  if(infected >= 1000){
+    document.getElementById('car').disabled=flag;
+    document.getElementById('elecar').disabled=flag;
+  }
+  if(infected >= 10000){
+    document.getElementById('airplane').disabled=flag;
+    document.getElementById('transatlantic').disabled=flag;
+  }
+}
+
+function Update(flag){
+  document.getElementById("counter").innerHTML = infected;
+  can_click(flag);
+}
+Update(true);
+function idlecount(){
+  infected=infected+idlepower;
+  Update(true);
+}
+function switchon(){
+  if (idleswitch==false){
+  setInterval(idlecount,1000);
+  }
+}
+function commonclick() {
+    infected=infected+clickpower;
+    Update(true);
+  }
+function powerclick(){
+  clickpower++;
+}
+function autoclick(){
+  idlepower=idlepower+clickpower;
+  switchon();
+  idleswitch=true;
 }
 function batclick(){
-  if(infected>=10){
-    console.log('loop');
-    var bat=function(){
-      infected++;
-      console.log(infected);
-    }
-    setInterval(bat,1000);
-  }
-  // Update();
+  idlepower=idlepower+2;
+  switchon();
+  idleswitch=true;
+}
+function carclick(){
+  idlepower=idlepower+4;
+  switchon();
+  idleswitch=true;
+}
+function airplaneclick(){
+  idlepower=idlepower+8;
+  switchon();
+  idleswitch=true;
+}
+function reset(){
+  infected = 0;
+  clickpower = 1;
+  idlepower = 0;
+  idleswitch = false;
+  Update(false);
 }

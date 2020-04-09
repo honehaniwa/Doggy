@@ -13,28 +13,32 @@
   <div id="main-screen">
     <table>
       <tr>
-        <td colspan="4" rowspan="3" onclick="commonclick()"><img id="coronaicon"src="{{ url_for('static', filename='images/mainicon.png') }}" ></td>
-        <td>感染経路</th>
-        <td>パワーアップ</th>
+        <td colspan="2" rowspan="4" onclick="commonclick()"><img id="coronaicon"src="{{ url_for('static', filename='images/mainicon.png') }}" ></td>
+        <td>感染経路</td>
+        <td>パワーアップ</td>
       </tr>
       <tr>
-        <td onclick="batclick();"><input type="button" value="コウモリ" id="bat" disabled></td>
-        <td>コウモリソース</td>
+        <td><input type="button" value="自動クリック" onclick="autoclick()" id="auto" disabled></td>
+        <td><input type="button" value="バイラルクリック" onclick="powerclick()" id="power" disabled></td>
       </tr>
       <tr>
-        <td>人間</td>
-        <td>花粉症</td>
+        <td><input type="button" value="コウモリ" onclick="batclick()" id="bat" disabled></td>
+        <td><input type="button" value="コウモリソース" onclick="batsauceclick()" id="batsources" disable></td>
       </tr>
       <tr>
-        <td colspan="2">感染者<br></td>
-        <td colspan="2"><input id="counter" type="text" value="" readonly></td>
-        <td>自動車</td>
-        <td>電気自動車</td>
+        <td><input type="button" value="人間" onclick="humanclick()" id="human" disable></td>
+        <td><input type="button" value="花粉症" onclick="allergyclick()" id="allergy" disable></td>
       </tr>
       <tr>
-        <td colspan="4">リセット<br></td>
-        <td>飛行機</td>
-        <td>大西洋横断飛行</td>
+        <td>感染者<br></td>
+        <td><p id="counter" ></p></td>
+        <td><input type="button" value="自動車" onclick="carclick()" id="car" disabled></td>
+        <td><input type="button" value="電気自動車" onclick="elecarclick()" id="elecar" disabled></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="button" value="リセット" onclick="reset()"><br></td>
+        <td><input type="button" value="飛行機" onclick="airplaneclick()" id="airplane" disable></td>
+        <td><input type="button" value="大西洋横断飛行" onclick="transatlanticclick()" id="transatlantic" disabled></td>
       </tr>
     </table>
   </div>
