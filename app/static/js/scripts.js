@@ -54,12 +54,10 @@ function powerclick(){
 function autoclick(){
   idlepower += clickpower;
   switchon();
-  // idleswitch=false;
 }
 function batclick(){
   idlepower=idlepower+2;
   switchon();
-  // idleswitch=false;
 }
 function batsourceclick(){
   clickpower+=2;
@@ -67,7 +65,6 @@ function batsourceclick(){
 function humanclick(){
   idlepower+=5;
   switchon();
-  // idleswitch=false;
 }
 function allergyclick(){
   clickpower += 20;
@@ -75,7 +72,6 @@ function allergyclick(){
 function carclick(){
   idlepower=idlepower+4;
   switchon();
-  // idleswitch=false;
 }
 function elecarclick(){
   clickpower += 100;
@@ -83,7 +79,6 @@ function elecarclick(){
 function airplaneclick(){
   idlepower=idlepower+8;
   switchon();
-  // idleswitch=false;
 }
 function transatlanticclick(){
   clickpower += 1000;
