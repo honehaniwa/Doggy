@@ -13,13 +13,13 @@
   <div id="main-screen">
     <table>
       <tr>
-        <td colspan="2" rowspan="4" onclick="commonclick()"><img id="coronaicon"src="{{ url_for('static', filename='images/mainicon.png') }}" ></td>
+        <td colspan="2" rowspan="4" ><img id="coronaicon" src="{{ url_for('static', filename='images/mainicon.png') }}" onclick="commonclick()" class="container selectDisable" ></td>
         <td>感染経路</td>
         <td>パワーアップ</td>
       </tr>
       <tr>
-        <td><input type="button" value="自動クリック" onclick="autoclick()" id="auto" disabled></td>
-        <td><input type="button" value="バイラルクリック" onclick="powerclick()" id="power" disabled></td>
+        <td><input type="button" value="自動クリック" onclick="autoclick()"></td>
+        <td><input type="button" value="バイラルクリック" onclick="powerclick()"></td>
       </tr>
       <tr>
         <td><input type="button" value="コウモリ" onclick="batclick()" id="bat" disabled></td>
@@ -31,9 +31,9 @@
       </tr>
       <tr>
         <td>感染者<br></td>
-        <td><p id="counter" ></p></td>
-        <td><input type="button" value="自動車" onclick="carclick()" id="car" disabled></td>
-        <td><input type="button" value="電気自動車" onclick="elecarclick()" id="elecar" disabled></td>
+        <td><p id="counter"></p></td>
+        <td><input type="button" value="自動車" onclick="carclick()"></td>
+        <td><input type="button" value="電気自動車" onclick="elecarclick()"></td>
       </tr>
       <tr>
         <td colspan="2"><input type="button" value="リセット" onclick="reset()"><br></td>

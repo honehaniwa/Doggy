@@ -8,8 +8,10 @@ html {
 
 table {
   table-layout: fixed;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 15%;
   background-color: #FFFFFF;
   text-align: center;
   border-collapse: collapse;
@@ -29,6 +31,18 @@ table {
 img{
     height: 30%;
     width: 30%;
+}
+
+.container:hover{
+  height: 32%;
+  width: 32%;
+  transition: .2s ease;
+}
+
+.container:active{
+    height: 30%;
+    width: 30%;
+    transition: .05s ease;
 }
 
 input{
